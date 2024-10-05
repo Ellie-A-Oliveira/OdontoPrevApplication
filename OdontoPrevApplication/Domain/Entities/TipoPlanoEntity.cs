@@ -35,5 +35,6 @@ namespace OdontoPrevApplication.Domain.Entities
         public required int ValidadeDias { get; set; }
 
         public virtual ICollection<TipoServicoEntity>? TipoServicos { get; set; }
+        public virtual ICollection<PlanoEntity>? Planos { get; set; }
     }
 }

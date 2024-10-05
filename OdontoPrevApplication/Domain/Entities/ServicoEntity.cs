@@ -23,7 +23,7 @@ namespace OdontoPrevApplication.Domain.Entities
         [ForeignKey("tb_sinistro")]
         public required int SinistroId { get; set; }
 
-        public virtual TipoServicoEntity? TipoServicoEntity { get; set; }
+        public virtual TipoServicoEntity? TipoServico { get; set; }
         public virtual SinistroEntity? Sinistro { get; set; }
     }
 }

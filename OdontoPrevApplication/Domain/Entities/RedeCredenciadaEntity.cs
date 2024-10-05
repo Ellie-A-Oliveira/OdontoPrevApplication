@@ -14,6 +14,7 @@ namespace OdontoPrevApplication.Domain.Entities
         [StringLength(100)]
         public required string Nome { get; set; }
 
-        public virtual ICollection<RedeCredenciadaEntity>? RedeCredenciadas { get; set; }
+        public virtual ICollection<EnderecoEntity>? Enderecos { get; set; }
+        public virtual ICollection<PrestadorServicoEntity>? PrestadorServicos { get; set; }
     }
 }

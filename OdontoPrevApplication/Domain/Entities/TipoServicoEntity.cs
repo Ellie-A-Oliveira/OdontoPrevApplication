@@ -19,5 +19,6 @@ namespace OdontoPrevApplication.Domain.Entities
 
         public virtual ICollection<TipoPlanoEntity>? TipoPlanos { get; set; }
         public virtual ICollection<ServicoEntity>? Servicos { get; set; }
+        public virtual ICollection<PrestadorServicoEntity>? PrestadorServicos { get; set; }
     }
 }

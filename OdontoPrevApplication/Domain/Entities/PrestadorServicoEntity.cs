@@ -45,8 +45,8 @@ namespace OdontoPrevApplication.Domain.Entities
         [ForeignKey("tb_rede_credenciada")]
         public required int RedeCredenciadaId { get; set; }
 
+        public virtual RedeCredenciadaEntity? RedeCredenciada { get; set; }
         public virtual ICollection<TipoServicoEntity>? TipoServicos { get; set; }
-        public virtual ICollection<EnderecoEntity>? Enderecos { get; set; }
         public virtual ICollection<SinistroEntity>? Sinistros { get; set; }
     }
 }

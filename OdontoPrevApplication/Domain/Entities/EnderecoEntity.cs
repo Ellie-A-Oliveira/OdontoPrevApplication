@@ -30,5 +30,8 @@ namespace OdontoPrevApplication.Domain.Entities
         public required string Cep { get; set; }
 
         public string? Complemento { get; set; }
+
+        public virtual BeneficiarioEntity? Beneficiario { get; set; }
+        public virtual RedeCredenciadaEntity? RedeCredenciada { get; set; }
     }
 }
