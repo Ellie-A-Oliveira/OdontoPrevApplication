@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>6eb3b139-38da-4f8f-8dbc-55c47fbd4ee3</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,19 +13,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.5" />
     <PackageReference Include="Oracle.EntityFrameworkCore" Version="8.23.60" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.8.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Dtos\" />
-    <Folder Include="Application\Interfaces\" />
     <Folder Include="Application\Services\" />
     <Folder Include="Domain\Interfaces\" />
     <Folder Include="Infrastructure\Data\Repositories\" />
-    <Folder Include="Presentation\Controllers\" />
-    <Folder Include="Presentation\" />
   </ItemGroup>
 
 </Project>

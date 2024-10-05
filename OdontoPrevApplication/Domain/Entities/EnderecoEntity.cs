@@ -22,11 +22,12 @@ namespace OdontoPrevApplication.Domain.Entities
         public required string Cidade { get; set; }
 
         [Required]
-        [RegularExpression(@"^\d{5}-\d{3}$")]
+        [StringLength(200)]
         public required string Estado { get; set; }
 
         [Required]
-        [StringLength(200)]
+        [StringLength(10)]
+        [RegularExpression(@"^\d{5}-\d{3}$")]
         public required string Cep { get; set; }
 
         public string? Complemento { get; set; }
