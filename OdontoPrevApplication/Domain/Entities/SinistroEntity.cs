@@ -19,12 +19,10 @@ namespace OdontoPrevApplication.Domain.Entities
         public double? ValorPagoParaPrestador { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_beneficiario")]
         public required int BeneficiarioId { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_prestador_servico")]
         public required int PrestadorServicoId { get; set; }
 

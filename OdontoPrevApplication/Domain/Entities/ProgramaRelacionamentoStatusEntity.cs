@@ -19,7 +19,6 @@ namespace OdontoPrevApplication.Domain.Entities
         public required DateTime DataAdesao { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_beneficiario")]
         public required int BeneficiarioId { get; set; }
 

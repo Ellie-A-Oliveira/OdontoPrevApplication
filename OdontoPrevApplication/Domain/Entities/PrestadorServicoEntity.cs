@@ -41,7 +41,6 @@ namespace OdontoPrevApplication.Domain.Entities
         public int? Avaliacao { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_rede_credenciada")]
         public required int RedeCredenciadaId { get; set; }
 

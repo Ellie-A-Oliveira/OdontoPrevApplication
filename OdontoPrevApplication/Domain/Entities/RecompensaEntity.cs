@@ -17,12 +17,10 @@ namespace OdontoPrevApplication.Domain.Entities
         public required DateTime ExpiraEm { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_beneficiario")]
         public required int BeneficiarioId { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_tipo_recompensa")]
         public required int TipoRecompensaId { get; set; }
 

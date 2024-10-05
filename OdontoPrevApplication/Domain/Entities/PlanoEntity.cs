@@ -21,11 +21,9 @@ namespace OdontoPrevApplication.Domain.Entities
         // Foreign Keys
 
         [Required]
-        [Key]
         [ForeignKey("tb_tipo_plano")]
         public required int TipoPlanoId { get; set; }
 
-        [Key]
         [ForeignKey("tb_empresa_contratante")]
         public int EmpresaContratanteId { get; set; }
 

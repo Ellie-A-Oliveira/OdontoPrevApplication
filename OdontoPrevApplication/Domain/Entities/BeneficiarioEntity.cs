@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -49,14 +50,19 @@ namespace OdontoPrevApplication.Domain.Entities
         public string? NumeroContrato { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_endereco")]
         public required int EnderecoId { get; set; }
 
+        [ForeignKey("tb_empresa_contratante")]
+        public int EmpresaContratanteId { get; set; }
+
         public virtual ProgramaRelacionamentoStatusEntity? ProgramaRelacionamentoStatus { get; set; }
         public virtual EnderecoEntity? Endereco { get; set; }
+        public virtual EmpresaContratanteEntity? EmpresaContratante { get; set; }
+
         public virtual ICollection<PlanoEntity>? Planos { get; set; }
         public virtual ICollection<SinistroEntity>? Sinistros { get; set; }
+        public virtual ICollection<MissaoEntity>? Missoes { get; set; }
         public virtual ICollection<RecompensaEntity>? Recompensas { get; set; }
     }
 }

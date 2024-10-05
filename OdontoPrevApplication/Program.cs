@@ -1,4 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using OdontoPrevApplication.Infrastructure.Data.AppData;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure database connection
+
+builder.Services.AddDbContext<ApplicationContext>(options => {
+    options.UseOracle(builder.Configuration.GetConnectionString("Oracle"));
+});
 
 // Add services to the container.
 

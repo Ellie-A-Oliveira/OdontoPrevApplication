@@ -44,12 +44,24 @@ namespace OdontoPrevApplication.Infrastructure.Data.AppData
                 .WithOne(s => s.Beneficiario);
 
             modelBuilder.Entity<BeneficiarioEntity>()
+                .HasMany(b => b.Missoes)
+                .WithOne(m => m.Beneficiario);
+
+            modelBuilder.Entity<BeneficiarioEntity>()
                 .HasMany(b => b.Recompensas)
                 .WithOne(r => r.Beneficiario);
+
+            modelBuilder.Entity<BeneficiarioEntity>()
+                .HasOne(b => b.EmpresaContratante)
+                .WithMany(ec => ec.Beneficiarios);
 
             modelBuilder.Entity<EmpresaContratanteEntity>()
                 .HasMany(ec => ec.Planos)
                 .WithOne(p => p.EmpresaContratante);
+
+            modelBuilder.Entity<EmpresaContratanteEntity>()
+                .HasMany(ec => ec.Beneficiarios)
+                .WithOne(b => b.EmpresaContratante);
 
             modelBuilder.Entity<EnderecoEntity>()
                 .HasOne(e => e.Beneficiario)
@@ -62,6 +74,10 @@ namespace OdontoPrevApplication.Infrastructure.Data.AppData
             modelBuilder.Entity<MissaoEntity>()
                 .HasOne(m => m.TipoMissao)
                 .WithMany(tm => tm.Missoes);
+
+            modelBuilder.Entity<MissaoEntity>()
+                .HasOne(m => m.Beneficiario)
+                .WithMany(b => b.Missoes);
 
             modelBuilder.Entity<PlanoEntity>()
                 .HasOne(p => p.EmpresaContratante)

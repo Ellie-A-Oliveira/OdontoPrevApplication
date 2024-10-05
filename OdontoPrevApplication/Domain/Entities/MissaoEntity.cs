@@ -12,8 +12,9 @@ namespace OdontoPrevApplication.Domain.Entities
         public int Id { get; set; }
 
         [Required]
-        [DefaultValue(false)]
-        public required bool Concluido { get; set; }
+        [Range(0, 1)]
+        [DefaultValue(0)]
+        public required int Concluido { get; set; }
 
         public int RecompensaRecebida { get; set; }
 
@@ -21,10 +22,14 @@ namespace OdontoPrevApplication.Domain.Entities
         public required DateTime ExpiraEm { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_tipo_missao")]
         public required int TipoMissaoId { get; set; }
 
+        [Required]
+        [ForeignKey("tb_beneficiario")]
+        public required int BeneficiarioId { get; set; }
+
         public virtual TipoMissaoEntity? TipoMissao { get; set; }
+        public virtual BeneficiarioEntity? Beneficiario { get; set; }
     }
 }

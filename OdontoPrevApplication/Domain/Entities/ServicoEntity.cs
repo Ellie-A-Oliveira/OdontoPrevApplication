@@ -14,12 +14,10 @@ namespace OdontoPrevApplication.Domain.Entities
         public double ValorPago { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_tipo_servico")]
         public required int TipoServicoId { get; set; }
 
         [Required]
-        [Key]
         [ForeignKey("tb_sinistro")]
         public required int SinistroId { get; set; }
 

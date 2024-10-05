@@ -23,5 +23,6 @@ namespace OdontoPrevApplication.Domain.Entities
         public required string NumeroContrato { get; set; }
 
         public virtual ICollection<PlanoEntity>? Planos { get; set; }
+        public virtual ICollection<BeneficiarioEntity>? Beneficiarios { get; set; }
     }
 }
