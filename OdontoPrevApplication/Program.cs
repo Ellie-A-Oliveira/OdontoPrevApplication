@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using OdontoPrevApplication.Application.Interfaces;
+using OdontoPrevApplication.Application.Services;
+using OdontoPrevApplication.Domain.Interfaces;
 using OdontoPrevApplication.Infrastructure.Data.AppData;
+using OdontoPrevApplication.Infrastructure.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +12,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationContext>(options => {
     options.UseOracle(builder.Configuration.GetConnectionString("Oracle"));
 });
+
+// Add repositories for DI
+builder.Services.AddTransient<IBeneficiarioRepository, BeneficiarioRepository>();
+builder.Services.AddTransient<IEnderecoRepository, EnderecoRepository>();
+
+// Add services for DI
+builder.Services.AddTransient<IBeneficiarioApplicationService, BeneficiarioApplicationService>();
+builder.Services.AddTransient<IEnderecoApplicationService, EnderecoApplicationService>();
 
 // Add services to the container.
 
