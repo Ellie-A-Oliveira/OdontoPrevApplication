@@ -15,7 +15,7 @@ namespace OdontoPrevApplication.Application.Dtos
         public required string Password { get; set; }
 
         [Required(ErrorMessage = $"Campo {nameof(Cpf)} é obrigatório")]
-        [RegularExpression(@"^(?!.*(\d)(?:.*\1){2})\d{3}\.\d{3}\.\d{3}-\d{2}$", ErrorMessage = "Campo deve possuir o formato XXX.XXX.XXX-XX")]
+        [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}\-\d{2}$", ErrorMessage = "Campo deve possuir o formato XXX.XXX.XXX-XX")]
         public required string Cpf { get; set; }
 
         [Required(ErrorMessage = $"Campo {nameof(Tipo)} é obrigatório")]

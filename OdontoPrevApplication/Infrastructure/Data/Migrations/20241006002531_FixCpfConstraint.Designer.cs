@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OdontoPrevApplication.Infrastructure.Data.AppData;
 using Oracle.EntityFrameworkCore.Metadata;
@@ -11,9 +12,11 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace OdontoPrevApplication.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20241006002531_FixCpfConstraint")]
+    partial class FixCpfConstraint
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,7 +55,7 @@ namespace OdontoPrevApplication.Migrations
                     b.Property<DateTime>("DataAdesao")
                         .HasColumnType("TIMESTAMP(7)");
 
-                    b.Property<int?>("EmpresaContratanteId")
+                    b.Property<int>("EmpresaContratanteId")
                         .HasColumnType("NUMBER(10)");
 
                     b.Property<int?>("EnderecoId")
@@ -548,7 +551,9 @@ namespace OdontoPrevApplication.Migrations
                 {
                     b.HasOne("OdontoPrevApplication.Domain.Entities.EmpresaContratanteEntity", "EmpresaContratante")
                         .WithMany("Beneficiarios")
-                        .HasForeignKey("EmpresaContratanteId");
+                        .HasForeignKey("EmpresaContratanteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("OdontoPrevApplication.Domain.Entities.EnderecoEntity", "Endereco")
                         .WithOne("Beneficiario")

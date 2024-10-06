@@ -39,9 +39,9 @@ namespace OdontoPrevApplication.Infrastructure.Data.Repositories
 
                 return entidade;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception("Não foi possível salvar o endereço");
+                throw new Exception("Não foi possível salvar o endereço", ex);
             }
         }
 
@@ -67,7 +67,7 @@ namespace OdontoPrevApplication.Infrastructure.Data.Repositories
                 }
 
                 //Gera um excecão para informar que nao foi possivel localizar o cliente
-                throw new Exception("Não foi possível localizar o endereço.");
+                throw new Exception("Não foi possível localizar o endereço");
             }
             catch (Exception ex)
             {

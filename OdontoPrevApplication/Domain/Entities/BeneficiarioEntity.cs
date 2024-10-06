@@ -29,7 +29,7 @@ namespace OdontoPrevApplication.Domain.Entities
         public required string Password { get; set; }
 
         [Required]
-        [RegularExpression(@"^(?!.*(\d)(?:.*\1){2})\d{3}\.\d{3}\.\d{3}-\d{2}$")]
+        [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}\-\d{2}$")]
         public required string Cpf { get; set; }
 
         [Required]
@@ -53,7 +53,7 @@ namespace OdontoPrevApplication.Domain.Entities
         public int? EnderecoId { get; set; }
 
         [ForeignKey("tb_empresa_contratante")]
-        public int EmpresaContratanteId { get; set; }
+        public int? EmpresaContratanteId { get; set; }
 
         public virtual ProgramaRelacionamentoStatusEntity? ProgramaRelacionamentoStatus { get; set; }
         public virtual EnderecoEntity? Endereco { get; set; }

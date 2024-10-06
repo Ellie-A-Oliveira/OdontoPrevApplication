@@ -36,9 +36,9 @@ namespace OdontoPrevApplication.Infrastructure.Data.Repositories
 
                 return entidade;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception("Não foi possível salvar o beneficiário");
+                throw new Exception("Não foi possível salvar o beneficiário", ex);
             }
         }
 
