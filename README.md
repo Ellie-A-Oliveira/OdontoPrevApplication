@@ -49,9 +49,13 @@ A camada de infraestrutura é responsável pelo acesso a dados, integração com
 
 ## Estrutura do Projeto
 A estrutura do projeto é organizada em pastas que correspondem às camadas da arquitetura. A seguir, apresentamos uma visão geral das principais pastas:
-/src /SorrisoAtivo.Api # Camada de apresentação
+
+/SorrisoAtivo.Presentation # Camada de apresentação
+
 /SorrisoAtivo.Application # Camada de aplicação
+
 /SorrisoAtivo.Domain # Camada de domínio
+
 /SorrisoAtivo.Infrastructure # Camada de infraestrutura
 
 ## Contribuição
