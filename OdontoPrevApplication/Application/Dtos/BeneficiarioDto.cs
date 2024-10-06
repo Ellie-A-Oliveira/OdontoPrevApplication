@@ -29,20 +29,15 @@ namespace OdontoPrevApplication.Application.Dtos
 
         public string? NumeroContrato { get; set; }
 
-        [Required(ErrorMessage = $"Campo {nameof(Rua)} é obrigatório")]
-        public required string Rua { get; set; }
+        public string? Rua { get; set; }
 
-        [Required(ErrorMessage = $"Campo {nameof(Numero)} é obrigatório")]
-        public required int Numero { get; set; }
+        public int? Numero { get; set; }
 
-        [Required(ErrorMessage = $"Campo {nameof(Cidade)} é obrigatório")]
-        public required string Cidade { get; set; }
+        public string? Cidade { get; set; }
 
-        [Required(ErrorMessage = $"Campo {nameof(Estado)} é obrigatório")]
-        public required string Estado { get; set; }
+        public string? Estado { get; set; }
 
-        [Required(ErrorMessage = $"Campo {nameof(Cep)} é obrigatório")]
-        public required string Cep { get; set; }
+        public string? Cep { get; set; }
 
         public string? Complemento { get; set; }
 

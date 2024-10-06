@@ -19,10 +19,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.8.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\Services\" />
-    <Folder Include="Domain\Interfaces\" />
-    <Folder Include="Infrastructure\Data\Repositories\" />
-  </ItemGroup>
-
 </Project>

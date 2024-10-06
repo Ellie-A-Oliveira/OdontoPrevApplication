@@ -5,7 +5,7 @@ namespace OdontoPrevApplication.Infrastructure.Data.AppData
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<BeneficiarioEntity> Beneficario { get; set; }
+        public DbSet<BeneficiarioEntity> Beneficiario { get; set; }
         public DbSet<EmpresaContratanteEntity> EmpresaContratante { get; set; }
         public DbSet<EnderecoEntity> Endereco { get; set; }
         public DbSet<MissaoEntity> Missao { get; set; }

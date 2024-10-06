@@ -49,9 +49,8 @@ namespace OdontoPrevApplication.Domain.Entities
         [StringLength(50)]
         public string? NumeroContrato { get; set; }
 
-        [Required]
         [ForeignKey("tb_endereco")]
-        public required int EnderecoId { get; set; }
+        public int? EnderecoId { get; set; }
 
         [ForeignKey("tb_empresa_contratante")]
         public int EmpresaContratanteId { get; set; }
