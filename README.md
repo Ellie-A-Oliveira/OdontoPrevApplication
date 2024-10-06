@@ -65,4 +65,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull re
 Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## Contato
-Para mais informações, entre em contato com a equipe de desenvolvimento da OdontoPrev.
+Para mais informações, entre em contato com a equipe de desenvolvimento da Adaptive Dialogs.
